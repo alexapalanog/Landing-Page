@@ -26,60 +26,87 @@ document.addEventListener('DOMContentLoaded', () => {
     navLinks.forEach(n => n.addEventListener('click', linkAction));
 });
 
-/* ==== arrow buttons === */
-    document.addEventListener('DOMContentLoaded', function() {
-        const container = document.querySelector('.menu_content_items_container');
-        const prevArrow = document.getElementById('prevArrow');
-        const nextArrow = document.getElementById('nextArrow');
-        const scrollAmount = container.clientWidth * 0.8; // Amount to scroll per interval
-        let scrollInterval;
+// Buttons
+document.addEventListener('DOMContentLoaded', function() {
+    const container = document.querySelector('.menu_content_items_container');
+    const prevArrow = document.getElementById('prevArrow');
+    const nextArrow = document.getElementById('nextArrow');
+    const scrollAmount = container.clientWidth * 0.8; // Amount to scroll per interval
+    let scrollInterval;
+    let visibilityTimer;
 
-        // Function to start auto-scrolling
-        function startAutoScroll() {
-            scrollInterval = setInterval(function() {
-                if (container.scrollLeft + container.clientWidth >= container.scrollWidth) {
-                    // If at the end, reset scroll to the start
-                    container.scrollTo({ left: 0, behavior: 'smooth' });
-                } else {
-                    container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-                }
-            }, 3000); // Adjust interval as needed (3000ms = 3 seconds)
+    // Function to start auto-scrolling
+    function startAutoScroll() {
+        scrollInterval = setInterval(function() {
+            if (container.scrollLeft + container.clientWidth >= container.scrollWidth) {
+                // If at the end, reset scroll to the start
+                container.scrollTo({ left: 0, behavior: 'smooth' });
+            } else {
+                container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            }
+        }, 2000);
+    }
+
+    // Function to stop auto-scrolling
+    function stopAutoScroll() {
+        clearInterval(scrollInterval);
+    }
+
+    // Function to handle previous arrow click
+    function scrollPrev() {
+        container.scrollBy({
+            left: -scrollAmount,
+            behavior: 'smooth'
+        });
+        stopAutoScroll(); // Stop auto-scrolling when manually interacting
+    }
+
+    // Function to handle next arrow click
+    function scrollNext() {
+        container.scrollBy({
+            left: scrollAmount,
+            behavior: 'smooth'
+        });
+        stopAutoScroll(); // Stop auto-scrolling when manually interacting
+    }
+
+    // Event listeners for arrow buttons
+    prevArrow.addEventListener('click', scrollPrev);
+    nextArrow.addEventListener('click', scrollNext);
+
+    // Function to handle visibility changes
+    function handleVisibilityChange(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Menu is visible, start the visibility timer
+                visibilityTimer = setTimeout(() => {
+                    startAutoScroll();
+                }, 3000); // 3000ms = 3 seconds
+            } else {
+                // Menu is not visible, stop scrolling and clear the timer
+                clearTimeout(visibilityTimer);
+                stopAutoScroll();
+            }
+        });
+    }
+
+    // Intersection Observer to detect when the menu is in the viewport
+    const observer = new IntersectionObserver(handleVisibilityChange, { threshold: 0.1 }); // Adjust threshold as needed
+
+    // Start observing the menu container
+    observer.observe(container);
+
+    // Optional: Stop auto-scrolling when the user manually scrolls
+    container.addEventListener('mouseover', stopAutoScroll);
+    container.addEventListener('mouseout', () => {
+        if (container.matches(':visible')) {
+            visibilityTimer = setTimeout(() => {
+                startAutoScroll();
+            }, 3000); // 3000ms = 3 seconds
         }
-
-        // Function to stop auto-scrolling
-        function stopAutoScroll() {
-            clearInterval(scrollInterval);
-        }
-
-        // Function to handle previous arrow click
-        function scrollPrev() {
-            container.scrollBy({
-                left: -scrollAmount,
-                behavior: 'smooth'
-            });
-            stopAutoScroll(); // Stop auto-scrolling when manually interacting
-        }
-
-        // Function to handle next arrow click
-        function scrollNext() {
-            container.scrollBy({
-                left: scrollAmount,
-                behavior: 'smooth'
-            });
-            stopAutoScroll(); // Stop auto-scrolling when manually interacting
-        }
-
-        // Start auto-scrolling when the page loads
-        startAutoScroll();
-
-        // Event listeners for arrow buttons
-        prevArrow.addEventListener('click', scrollPrev);
-        nextArrow.addEventListener('click', scrollNext);
-
-        // Optional: Stop auto-scrolling when the user manually scrolls
-        container.addEventListener('mouseover', stopAutoScroll);
-        container.addEventListener('mouseout', startAutoScroll);
     });
+});
+
 
 
 // Initialize ScrollReveal
