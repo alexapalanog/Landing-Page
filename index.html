@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+<body>
+    <div class="loading-screen">
+        <h1>Welcome</h1>
+    </div>
+    <main>
+
+            <!-- Header -->
+            <header class="header" id="header">
+                <nav class="nav container">   
+                    <a href="#" class="nav_logo">
+                        <div class="nav_logo_circle">
+                            <img src="image_assets/logo.png" class="nav_logo_img" alt="JavaSolacé Logo">
+                        </div>
+                        <div class="nav_logo_name">
+                            <img src="image_assets/logo_name.png" class="nav_logo_img_name" alt="JavaSolacé Name">
+                        </div>
+                    </a>
+
+                    <!-- Header Navigation for Large Screens -->
+                    <ul class="nav_list">
+                        <li class="nav_item"><a href="#home" class="nav_link active-link">Home</a></li>
+                        <li class="nav_item"><a href="#about" class="nav_link">About</a></li>
+                        <li class="nav_item"><a href="#menu" class="nav_link">Menu</a></li>
+                        <li class="nav_item"><a href="#contact" class="nav_link">Contact</a></li>
+                    </ul>
+
+                    <!-- Menu for Mobile -->
+                    <div class="nav_menu" id="nav-menu">
+                        <span class="nav_title">Menu</span>
+                        <div class="nav_name_menu">
+                            <img src="image_assets/logo_name.png" class="nav_name_img_menu" alt="JavaSolacé Name">
+                        </div>
+                        <!-- Header Navigation for Mobile -->
+                        <ul class="nav_list">
+                            <li class="nav_item"><a href="#home" class="nav_link active-link">Home</a></li>
+                            <li class="nav_item"><a href="#about" class="nav_link">About</a></li>
+                            <li class="nav_item"><a href="#menu" class="nav_link">Menu</a></li>
+                            <li class="nav_item"><a href="#contact" class="nav_link">Contact</a></li>
+                        </ul>
+                        <!-- Menu Close for Mobile -->
+                        <div class="nav_close" id="nav-close">
+                            <i class="fa-solid fa-xmark"></i>
+                        </div>
+                    </div>
+
+                    <!-- Toggle button for Mobile -->
+                    <div class="nav_bars">
+                        <div class="nav_toggle" id="nav-toggle">
+                            <i class="fa-solid fa-bars"></i>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+
+            <!-- Home Section -->
+            <section class="home_section" id="home">
+                <div class="home_container">
+                    <h1 class="home_catchphrase">Brewed Comfort in Every Cup</h1>
+                    <p class="home_description">
+                        At JavaSolacé, each coffee is crafted to offer 
+                        the perfect blend of warmth and comfort,
+                        fueling your passions—whether you're a coder, 
+                        a creative, or just seeking a moment of calm.
+                    </p>
+                </div>
+            </section>
+        
+            <!-- About Section -->
+            <section class="about_section" id="about">
+                <div class="about_video_container">
+                    <video class="about_video" controls>
+                        <source src="image_assets/coffee_ads.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+
+                <div class="about_welcome_container">
+                    <h2 class="about_welcome_title">
+                        Welcome to JavaSolacé
+                        <img src="image_assets/logo_no_bg.png" alt="Java Solacé Logo" class="about_logo_icon">
+                    </h2>
+
+                    <p class="about_description">
+                        Where coffee isn’t just a drink—it’s a way to recharge, 
+                        much like coding. Founded by a passionate programmer, 
+                        Java Solace draws inspiration from the tech world. 
+                        <br><br>
+                        In programming, "Java" is more than a language; 
+                        it’s the foundation for building solutions. 
+                        Similarly, Java Solace is your foundation 
+                        for finding solace in the fast-paced world, where 
+                        you can pause, sip, and recharge. 
+                        <br><br>
+                        Just like debugging brings clarity to code, 
+                        our coffee brings clarity to your day. 
+                        Here, we blend the precision of programming 
+                        with the art of coffee-making to serve you a cup 
+                        that powers both your creativity and focus.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Best Services Section -->
+            <section class="service_section">
+                <div class="service_container">
+                    <div class="service_title_grid">
+                        <h2 class="service_title">BEST SERVICE</h2>
+                    </div>
+                    
+                    <div class="service_info"> <!-- Info of left side image -->
+                        <div>
+                            <h3 class="service_info_title">AMBIENCE</h3>
+                            <img src="image_assets/AMBIENCE.png" alt="Ambience" class="service_icon">
+                        </div>
+                        <div>
+                            <h3 class="service_info_title">QUALITY MACHINE</h3>
+                            <img src="image_assets/QUALITY MACHINE.png" alt="Quality Machine" class="service_icon">
+                        </div>
+                        <div>
+                            <h3 class="service_info_title">AUTHENTIC</h3>
+                            <img src="image_assets/AUTHENTIC.png" alt="Authentic" class="service_icon">
+                        </div>
+                    </div>
+
+                    <div class="service_image_container">
+                        <div class="service_image">
+                            <img src="image_assets/service_coffee.png" alt="Service Coffee" class="service_coffee_image">
+                        </div>
+                    </div>
+
+                    <div class="service_info_2"> <!-- Info of right side image -->
+                        <div>
+                            <img src="image_assets/BEST QUALITY.png" alt="Best Quality" class="service_icon">
+                            <h3 class="service_info_title">BEST QUALITY</h3>
+                        </div>
+                        <div>
+                            <img src="image_assets/CUSTOMER SERVICE.png" alt="Customer Service" class="service_icon">
+                            <h3 class="service_info_title">CUSTOMER SERVICE</h3>
+                        </div>
+                        <div>
+                            <img src="image_assets/CLEANLINESS.png" alt="Cleanliness" class="service_icon">
+                            <h3 class="service_info_title">CLEANLINESS</h3>
+                        </div>
+                    </div>
+                </div>
+            </section> 
+
+            <!-- Menu Section -->
+            <section class="menu_section" id="menu">
+                <div class="menu_container">
+                    <div class="menu_title_grid">
+                        <h2 class="menu_welcome_title">BEST SELLER</h2>
+                    </div>
+        
+                    <div class="menu_navigation">
+                        <div class="menu_content_items_container">
+                            <div class="menu_content">
+                                <div class="menu_item">
+                                    <img src="image_assets/brown_sugar_oatmilk_espresso.jpg" alt="projects image" class="menu_image">
+                                    <div>
+                                        <h1 class="menu_title">Sweet Oat Symphony</h1>
+                                        <p class="menu_info">
+                                            A harmonious blend of rich espresso 
+                                            <br>and sweet brown sugar, all wrapped 
+                                            <br>in creamy oatmilk perfection.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+        
+                        <div class="menu_content">
+                            <div class="menu_item">
+                                <img src="image_assets/latte_macchiato.jpg" alt="menu image" class="menu_image">
+                                    <div>
+                                        <h1 class="menu_title">
+                                            Chill Latte Macchiato
+                                        </h1>
+                                        <p class="menu_info">
+                                            Beat the heat with this chilled latte, 
+                                            <br>where a splash of espresso meets 
+                                            <br>creamy milk for a refreshing twist.
+                                        </p>
+                                    </div>
+                            </div>
+                        </div>
+        
+                        <div class="menu_content">
+                            <div class="menu_item">
+                                <img src="image_assets/salted_dalgona.jpg" alt="menu image" class="menu_image">
+                                    <div>
+                                        <h1 class="menu_title">
+                                            Dalgona Dream
+                                        </h1>
+                                        <p class="menu_info">
+                                            Dive into a cloud of whipped Dalgona 
+                                            <br>with a touch of salted caramel, a
+                                            <br>dreamy indulgence that’s pure bliss.
+                                        </p>
+                                    </div>
+                            </div>
+                        </div>
+        
+                        <div class="menu_content">
+                            <div class="menu_item">
+                                <img src="image_assets/java_cookie_pancake.jpg" alt="menu image" class="menu_image">
+                                    <div>
+                                        <h1 class="menu_title">
+                                            Java Cookie Cloud
+                                        </h1>
+                                        <p class="menu_info">
+                                            Fluffy souffle pancakes loaded with 
+                                            <br>chocolate and cookie chips, offering
+                                            <br> a delightful crunch in every bite.
+                                        </p>
+                                    </div>
+                            </div>
+                        </div>
+        
+                        <div class="menu_content">
+                            <div class="menu_item">
+                                <img src="image_assets/matcha_tiramisu.jpg" alt="menu image" class="menu_image">
+                                    <div>
+                                        <h1 class="menu_title">
+                                            Matcha Tiramisu
+                                        </h1>
+                                        <p class="menu_info">
+                                            A refreshing twist on a classic, 
+                                            <br>where matcha meets tiramisu 
+                                            <br>for a serene experience.
+                                        </p>
+                                    </div>
+                            </div>
+                        </div>
+        
+                        <div class="menu_content">
+                            <div class="menu_item">
+                                <img src="image_assets/Strawberry White Chocolate Scones.jpg" alt="menu image" class="menu_image">
+                                    <div>
+                                        <h1 class="menu_title">
+                                            Berry Bliss Scones
+                                        </h1>
+                                        <p class="menu_info">
+                                            Sweet and fruity scones with chunks  
+                                            <br>of white chocolate, perfect for a
+                                            <br> blissful treat with your coffee.
+                                        </p>
+                                    </div>
+                            </div>
+                        </div>
+        
+                        <div class="menu_content">
+                            <div class="menu_item">
+                                <img src="image_assets/Rasberry Croissant.jpg" alt="menu image" class="menu_image">
+                                    <div>
+                                        <h1 class="menu_title">
+                                            Berry Burst Croissant
+                                        </h1>
+                                        <p class="menu_info">
+                                            Flaky, buttery croissant filled with
+                                            <br>a burst of raspberry sweetness—each
+                                            <br>bite is a delightful surprise.
+                                        </p>
+                                    </div>
+                            </div>
+                        </div>
+        
+        
+                        <div class="menu_content">
+                            <div class="menu_item">
+                                <img src="image_assets/double_Cheeseburger.jpg" alt="menu image" class="menu_image">
+                                    <div>
+                                        <h1 class="menu_title">
+                                            Overload Chiz Burger
+                                        </h1>
+                                        <p class="menu_info">
+                                            Stacked high with double the cheese, 
+                                            <br>this burger is a savory,
+                                            <br>and gooey indulgence.
+                                        </p>
+                                    </div>
+                            </div>
+                        </div>
+        
+                        <div class="menu_content">
+                            <div class="menu_item">
+                                <img src="image_assets/pepperoni pizza roll.jpg" alt="menu image" class="menu_image">
+                                    <div>
+                                        <h1 class="menu_title">
+                                            Pepperoni Twist Roll
+                                        </h1>
+                                        <p class="menu_info">
+                                            A twist on classic pizza,  
+                                            <br>featuring  pepperoni rolled
+                                            <br>into a crispy, cheesy delight.
+                                        </p>
+                                    </div>
+                            </div>
+                        </div>
+        
+                        <div class="menu_content">
+                            <div class="menu_item">
+                                <img src="image_assets/americano cocktail.jpg" alt="menu image" class="menu_image">
+                                    <div>
+                                        <h1 class="menu_title">
+                                            Americano Cocktail
+                                        </h1>
+                                        <p class="menu_info">
+                                            An intriguing mix of bold espresso   
+                                            <br>with a touch of cocktail flair—perfect  
+                                            <br>for those who twist and thrill.
+                                        </p>
+                                    </div>
+                            </div>
+                        </div>
+                        <button class="arrow-button left-arrow" id="prevArrow">‹</button>
+                        <button class="arrow-button right-arrow" id="nextArrow">›</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="contact_section" id="contact">
+                <div class="contact_container">
+        
+                    <div class="contact_connect_title">
+                        <h2 class="connect_title">
+                            CONNECT WITH US
+                        </h2>
+        
+                        <ul>
+                            <li>
+                                <a href="https://www.instagram.com/" target="_blank" class="contact-icon-button">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.facebook.com/" target="_blank" class="contact-icon-button">
+                                    <i class="fa-brands fa-facebook"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.tiktok.com/en/" target="_blank" class="contact-icon-button">
+                                    <i class="fa-brands fa-tiktok"></i>
+                                </a>
+                            </li>
+                        </ul>
+        
+                        <p class="connect_info">
+                            Follow us to stay in the loop on what’s new with JavaSolacé
+                        </p>
+                    </div>
+        
+                    <div class="contact_newsletter_title">
+                        <h2 class="newsletter_title">
+                            GET THE LATEST UPDATE
+                        </h2>
+        
+                        <form action="/submit-email" method="post">
+                            <input type="email" placeholder="Enter email address" required>
+                            <button type="submit">Submit</button>
+                        </form>
+                          
+                        <p class="newsletter_info"></p>
+                            Sign up for our newsletter for our latest news and updates
+                    </p>
+                    </div>
+                </div>
+            </section> 
+        </main>
+    <script src="main.js"></script>
+</main>
+</body>
+</html>
